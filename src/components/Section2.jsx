@@ -16,7 +16,7 @@ export default function Section2(props) {
                 Why Sell with Top Quality Livestock?
             </h1>
             </div>
-            <p className="text-zinc-800 text-center text-xl font-medium leading-[140%] self-center w-full -ml-5 mt-8 max-w-xl">
+            <p className="text-zinc-800 text-center text-xl font-medium leading-[140%] self-center w-full mt-8 max-w-xl">
             Top Quality Livestock is the premier online marketplace connecting
             a national network of verified buyers and sellers of livestock.
             </p>

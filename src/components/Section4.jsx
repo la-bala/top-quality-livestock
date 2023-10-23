@@ -4,8 +4,16 @@ import No1 from '../assets/no1.png';
 import No2 from '../assets/no2.png';
 import No3 from '../assets/no3.png';
 import No4 from '../assets/no4.png';
+import { useNavigate } from 'react-router-dom';
 
 export default function Section4(props) {
+
+    const navigate = useNavigate();
+
+    function login() {
+        navigate('/login', { replace: false });
+    }
+
     return(
     <section className="bg-stone-100 self-stretch flex w-full justify-evenly flex-row mt-24 pt-12 pb-28 px-5 max-md:max-w-full max-md:mt-10">
         <div className="flex flex-col items-stretch w-6/12 max-md:hidden">
@@ -78,11 +86,11 @@ export default function Section4(props) {
                 Start appearing in our catalog for <br /> thousands of nationwide buyers <br /> searching for livestock everyday!
                 </div>
             </div>
-            <div className="justify-center items-center shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] bg-orange-500 flex w-[342px] max-w-full grow flex-col mt-16 px-5 py-3.5 rounded-lg max-md:mt-10">
+            <button onClick={login} className="justify-center items-center shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] bg-orange-500 flex w-[342px] max-w-full grow flex-col mt-16 px-5 py-3.5 rounded-lg max-md:mt-10">
                 <div className="text-white text-lg font-bold leading-[155.556%] self-center">
                 Register to Get Started
                 </div>
-            </div>
+            </button>
         </div>
     </section>
     );

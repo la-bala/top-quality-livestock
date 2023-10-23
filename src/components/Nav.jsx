@@ -1,7 +1,15 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 import TqlLogo from '../assets/tqllogo.png';
 
 export default function Nav(props) {
+
+    const navigate = useNavigate();
+
+    function login() {
+        navigate('/login', { replace: false });
+    }
+
     return(
         <nav className="flex flex-row">
           <img
@@ -30,10 +38,10 @@ export default function Nav(props) {
                 </span>
                 </div>
                 <div className="flex items-end">
-                    <button className="text-slate-800 text-base font-semibold leading-[150%] self-stretch justify-center items-center border shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] bg-white w-[166px] max-w-full px-3 py-2 rounded-md border-solid border-gray-200">
+                    <button onClick={login} className="text-slate-800 text-base font-semibold leading-[150%] self-stretch justify-center items-center border shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] bg-white w-[166px] max-w-full px-3 py-2 rounded-md border-solid border-gray-200">
                         Sell Your Livestock
                     </button>
-                    <button className="text-white text-base font-bold leading-[150%] self-stretch justify-center items-center shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] bg-green-600 w-[80px] max-w-full px-3 py-2 rounded-md">
+                    <button onClick={login} className="text-white text-base font-bold leading-[150%] self-stretch justify-center items-center shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] bg-green-600 w-[80px] max-w-full px-3 py-2 rounded-md">
                         Log in
                     </button>
                 </div>
